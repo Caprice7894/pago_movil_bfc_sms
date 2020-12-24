@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pago movil BFC SMS</string>
+    <string name="nombre">Nombre</string>
+    <string name="editNombre">Nombre...</string>
+    <string name="numero">Numero Celular</string>
+    <string name="editNumero">04XXXXXXXX</string>
+    <string name="monto">Monto</string>
+    <string name="editMonto">000,00</string>
+    <string name="ci">Cedula de identidad/RIF</string>
+    <string name="editCI">30...</string>
+    <string name="banco">Numero del banco</string>
+    <string name="enviar">Enviar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="persona">Persona (Tercero)</string>
+    <string name="empresa">Empresa</string>
+</resources>

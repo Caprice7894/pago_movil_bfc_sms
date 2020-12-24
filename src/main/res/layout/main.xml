@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/lytContenedor" >
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:scrollbars="vertical" >
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+			<TextView android:id="@+id/TextView00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                android:textStyle="bold" />
+            <EditText android:id="@+id/editNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editNombre"
+                />
+
+            <TextView android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/numero"
+                android:textStyle="bold" />
+
+            <EditText android:id="@+id/editNumero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editNumero"
+                android:inputType="phone" />
+
+
+            <TextView android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/monto"
+                android:textStyle="bold" />
+
+            <EditText android:id="@+id/editMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editMonto"
+                android:inputType="number" />
+
+
+            <TextView android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ci"
+                android:textStyle="bold" />
+
+            <Spinner android:id="@+id/spci"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" >
+            </Spinner>
+
+            <EditText android:id="@+id/editCi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editCI"
+                android:inputType="number" />
+
+            <TextView android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/banco"
+                android:textStyle="bold" />
+
+            <Spinner android:id="@+id/spbanco"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" >
+            </Spinner>
+
+            <RadioGroup android:id="@+id/RGb"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton android:id="@+id/RbPersona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/persona" />
+
+                <RadioButton android:id="@+id/RbEmpresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empresa" />
+
+            </RadioGroup>
+
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TableRow>
+
+                    <Button android:id="@+id/enviar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="@string/enviar"/>
+
+                    <Button android:id="@+id/lista"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Lista"/>
+
+                    <Button android:id="@+id/agregar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Agregar" />
+
+                    <Button android:id="@+id/cancelar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="@string/cancelar"/>
+
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+	</ScrollView>
+
+</LinearLayout>
+
+

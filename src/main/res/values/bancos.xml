@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bancos">
+        <item>0102 - Banco de Venezuela</item>
+        <item>0104 - Venezolano de Crédito</item>
+        <item>0105 - Mercantil</item>
+        <item>0108 - Provincial</item>
+        <item>0114 - Bancaribe</item>
+        <item>0115 - Exterior</item>
+        <item>0116 - Occidental de Descuento</item>
+        <item>0128 - Banco Caroní</item>
+        <item>0134 - Banesco</item>
+        <item>0138 - Banco Plaza</item>
+        <item>0151 - BFC Banco Fondo Comun</item>
+        <item>0156 - 100% Banco</item>
+        <item>0157 - Del Sur</item>
+        <item>0163 - Banco del Tesoro</item>
+        <item>0166 - Banco Agrícola de Venezuela</item>
+        <item>0168 - Bancrecer</item>
+        <item>0169 - Mi Banco</item>
+        <item>0172 - Bancamiga</item>
+        <item>0174 - Banplus</item>
+        <item>0175 - Bicentenario del Pueblo</item>
+        <item>0177 - Banfanb</item>
+        <item>0191 - BNC Nacional de Credito</item>
+    </string-array>
+</resources>
