@@ -1,17 +1,19 @@
 package caprice.bfcpago;
 
+import android.util.Log;
+
 public class destinatario
 {
 
-	public String banco = "";
+	public int banco = 0;
     public String telefono = "";
-    public String pais = "";
-    public String cedula = "";
-    public boolean tipoCuenta = false;
+    public int pais = 0;
+    public int cedula = 0;
+    public int tipoCuenta = 0;
     public String nombre = "";
 
 	//Constructor de la clase destinatario
-	public destinatario(String b, String t, String p, String ci, boolean tp, String name)
+	public destinatario(int b, String t, int p, int ci, int tp, String name)
 	{
 		banco = b;
 		telefono = t;
@@ -21,69 +23,7 @@ public class destinatario
 		nombre = name;
 	}
 
-	public void setBanco(String b)
-	{
-		banco = b;
+	public void log_data(){
+		Log.v("caprice.bfcpago","".format("banco= %d, pais= %d, cedula= %d, telefono= %s, tipoCuenta= %d, nombre= %s", banco, pais, cedula, telefono, tipoCuenta, nombre));
 	}
-
-	public void setTelefono(String t)
-	{
-		telefono = t;
-	}
-
-	public void setPais(String p)
-	{
-		pais = p;
-	}
-
-	public void setCedula(String ci)
-	{
-		cedula = ci;
-	}
-
-	public void setTipoCuenta(boolean tp)
-	{
-		tipoCuenta = tp;
-	}
-
-    public void setTipoCuenta(int tp)
-    {
-        tipoCuenta = (tp == 1)? true: false;
-    }
-
-	public void setNombre(String name)
-	{
-		nombre = name;
-	}
-
-	public String getBanco()
-	{
-		return banco;
-	}
-
-	public String getTelefono()
-	{
-		return telefono;
-	}
-
-	public String getPais()
-	{
-		return pais;
-	}
-
-	public String getCedula()
-	{
-		return cedula;
-	}
-
-	public String getTipoCuenta()
-	{
-		return (!tipoCuenta)?"PAT":"PAC";
-	}
-
-	public String getNombre()
-	{
-		return nombre;
-	}
-
 }

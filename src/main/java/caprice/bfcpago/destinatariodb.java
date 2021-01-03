@@ -17,7 +17,7 @@ public class destinatariodb
 	static final String DB_NAME = "pagomovilbfc.db";
 	static final int DB_VERS = 2;
 
-	static final String DB_CREATE = "CREATE TABLE personas(ID integer primary key autoincrement, NOMBRE text, CI integer, NACIONALIDAD integer, TELEFONO integer,  TIPO integer, BANCO integer);";
+	static final String DB_CREATE = "CREATE TABLE personas(ID integer primary key autoincrement, NOMBRE text, CI integer, NACIONALIDAD integer, TELEFONO text,  TIPO integer, BANCO integer);";
 
 	public static SQLiteDatabase db;
 
@@ -47,7 +47,7 @@ public class destinatariodb
 		return db;
 	}
 
-	public boolean agregarDatos(String n, String ci, int nac, String tel, int tipo, int banco)
+	public boolean agregarDatos(String n, int ci, int nac, String tel, int tipo, int banco)
 	{
         
                 Log.v("caprice.bfcpago-destinatarioDB","Antes de guardar los datos");

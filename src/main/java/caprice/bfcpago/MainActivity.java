@@ -161,7 +161,7 @@ public class MainActivity extends Activity
                 
                 agg.putExtra("nombre", nombre.getText().toString());
                 agg.putExtra("telefono", numero.getText().toString());
-                agg.putExtra("cedula", ci.getText().toString());
+                agg.putExtra("cedula", new Integer(ci.getText().toString()));
 
                 agg.putExtra("nacionalidad", spci.getSelectedItemPosition());
 
@@ -174,9 +174,30 @@ public class MainActivity extends Activity
                 startActivityForResult(agg, REQUEST_CODE_AGG);
 
             break;
+		case R.id.lista:
+			Intent listar = new Intent(this, listarDestinatarios.class);
+			startActivityForResult(listar, REQUEST_CODE_LIST);
+		break;
+
         }
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+	    super.onActivityResult(requestCode, resultCode, data);
+	    switch(requestCode){
+		    case REQUEST_CODE_LIST:
+			    if (resultCode == 1){
+				nombre.setText(data.getStringExtra("nombre"));
+				numero.setText(data.getStringExtra("telefono"));
+				ci.setText(new Integer(data.getIntExtra("cedula",0)).toString());
+				spci.setSelection(data.getIntExtra("pais", 0));
+				spBanco.setSelection(data.getIntExtra("banco", 0));
+				rg.clearCheck();
+				rg.check(data.getIntExtra("tipoCuenta", 0));
+			} // if (resultCode)
+		} //switch(requestCode)
+    } //onActivityResult
 }
 //getSelectedItemPosition();

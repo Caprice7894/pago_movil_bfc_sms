@@ -59,6 +59,6 @@ public class agregarDestinatario extends Activity implements OnClickListener
 		destinatariodb db = new destinatariodb(this);
         
                 Log.v("caprice.bfcpago-mainActivity","Antes de ir a db");
-		return db.agregarDatos(b.getString("nombre"), b.getString("cedula"), b.getInt("nacionalidad"), b.getString("telefono"), b.getInt("tipoCuenta"), b.getInt("banco"));
+		return db.agregarDatos(b.getString("nombre"), b.getInt("cedula"), b.getInt("nacionalidad"), b.getString("telefono"), b.getInt("tipoCuenta"), b.getInt("banco"));
 	}
 }

@@ -21,7 +21,6 @@ import android.util.Log;
 
 public class listarDestinatarios extends Activity
 {
-	destinatario dest = new destinatario(null,null,null,null,false,null);
     Context c;
 	@Override
 	protected void onCreate(Bundle savedInstance)
@@ -43,13 +42,14 @@ public class listarDestinatarios extends Activity
             do
             {
                 Log.v("caprice.bfcpago-listarDestinatario","bucle");
-                final destinatario d = new destinatario(reg.getString(6),
-                reg.getString(2),
-                reg.getString(4),
-                reg.getString(3),
-                (reg.getInt(5) == 1)? true: false,
-                reg.getString(1));
-                    Log.v("caprice.bfcpago-listarDestinatario","Llegamos hasta despues crear d");
+                final destinatario d = new destinatario(reg.getInt(6), //banco
+                reg.getString(4), //telefono
+                reg.getInt(3), //nacionalidad
+                reg.getInt(2), //cedula
+                reg.getInt(5), //tipo
+                reg.getString(1)); // nombre
+		d.log_data();
+                Log.v("caprice.bfcpago-listarDestinatario","Llegamos hasta despues crear d");
                 Button b = new Button(this);
                 b.setLayoutParams(lp);
                 b.setText(String.format("%s\n%s",d.nombre,d.telefono));
@@ -64,8 +64,8 @@ public class listarDestinatarios extends Activity
                         i.putExtra("telefono",d.telefono);
                         i.putExtra("cedula",d.cedula);
                         i.putExtra("pais",d.pais);
-				        i.putExtra("banco",d.banco);
-				        i.putExtra("tipoCuenta",d.tipoCuenta);
+                        i.putExtra("banco",d.banco);
+                        i.putExtra("tipoCuenta",d.tipoCuenta);
                         setResult(1,i);
                         finish();
                         }
