@@ -28,10 +28,10 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug
     - name: dir
-      run: ls
-#    - name: Allow Download of the app
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: dev-app
-#        path: build/dist/debug
+      run: ls build/output/apk
+    - name: Allow Download of the app
+      uses: actions/upload-artifact@v2
+      with:
+        name: dev-app
+        path: build/output/apk
       
