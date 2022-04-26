@@ -24,7 +24,7 @@ jobs:
       uses: android-actions/setup-android@v2
 
     - name: dir
-      run: ls /usr/local/lib/android/sdk/build-tools /usr/local/lib/android/sdk/platform-tools
+      run: ls /usr/local/lib/android/sdk/build-tools /usr/local/lib/android/sdk/platform-tools /usr/local/lib/android/sdk/platforms 
 
 #    - name: Grant execute permission for gradlew
 #      run: chmod +x gradlew
